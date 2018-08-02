@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    style="@style/Widget.MaterialComponents.CardView"
+    app:cardBackgroundColor="#F4F4F4">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/item_thumbnail"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/item_youtube"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/round_play_circle_filled_white_48"
+            android:background="?attr/selectableItemBackground"
+            android:padding="8dp"
+            app:layout_constraintStart_toStartOf="@id/item_thumbnail"
+            app:layout_constraintTop_toTopOf="@id/item_thumbnail"
+            app:layout_constraintEnd_toEndOf="@id/item_thumbnail"
+            app:layout_constraintBottom_toBottomOf="@id/item_thumbnail"
+            android:visibility="gone"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/item_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle1"
+            app:layout_constraintTop_toBottomOf="@id/item_thumbnail" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/item_subtitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintTop_toBottomOf="@id/item_title" />
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/item_share_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/round_share_black_24"
+            android:background="?attr/selectableItemBackground"
+            android:padding="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_subtitle" />
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/item_like_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/round_thumb_up_black_24"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintEnd_toStartOf="@id/item_share_button"
+            app:layout_constraintTop_toTopOf="@id/item_share_button" />
+
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/item_link_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/round_link_black_24"
+            android:padding="8dp"
+            android:background="?attr/selectableItemBackground"
+            app:layout_constraintEnd_toStartOf="@id/item_like_button"
+            app:layout_constraintTop_toTopOf="@id/item_share_button" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/item_score_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            app:tint="?android:attr/textColorSecondary"
+            android:src="@drawable/round_score_black_18"
+            app:layout_constraintBottom_toBottomOf="@id/item_share_button"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/item_share_button" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/item_score"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintBottom_toBottomOf="@id/item_share_button"
+            app:layout_constraintStart_toEndOf="@id/item_score_icon"
+            app:layout_constraintTop_toTopOf="@id/item_share_button" />
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/item_comment_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            app:tint="?android:attr/textColorSecondary"
+            android:src="@drawable/round_comment_black_18"
+            app:layout_constraintBottom_toBottomOf="@id/item_share_button"
+            app:layout_constraintStart_toEndOf="@id/item_score"
+            app:layout_constraintTop_toTopOf="@id/item_share_button" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/item_comment_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            app:layout_constraintBottom_toBottomOf="@id/item_share_button"
+            app:layout_constraintStart_toEndOf="@id/item_comment_icon"
+            app:layout_constraintTop_toTopOf="@id/item_share_button" />
+
+        <View
+            android:id="@+id/separator0"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:background="#333"
+            app:layout_constraintTop_toBottomOf="@id/item_share_button"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/item_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/separator0" />
+
+        <!--<View
+            android:id="@+id/barrier0"
+            android:layout_width="match_parent"
+            android:layout_height="8dp"
+            app:layout_constraintTop_toBottomOf="@id/item_share_button" />-->
+    </android.support.constraint.ConstraintLayout>
+</android.support.design.card.MaterialCardView>

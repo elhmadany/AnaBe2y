@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ana Be2y</string>
+    <string name="item_subtitle">Posted by %s %s ago.</string>
+    <string name="comment_title">%s . %s</string>
+    <string name="facebook_application_id" translatable="false">1647149858745803</string>
+    <string name="facebook_login_protocol_scheme" translatable="false">fb1647149858745803</string>
+</resources>
